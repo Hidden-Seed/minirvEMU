@@ -1,0 +1,37 @@
+# clang-format configuration for maintaining specific coding style
+BasedOnStyle: Google
+IndentWidth: 2              # Indentation with 2 spaces
+TabWidth: 2                 # Tab width for consistency
+UseTab: Never               # Always use spaces, no tabs
+ColumnLimit: 0              # No limit on line length
+AlignAfterOpenBracket: Align    # Align after open bracket (useful for multi-line macro definitions)
+AlignConsecutiveAssignments: true # Align consecutive assignments
+AlignTrailingComments: true   # Align trailing comments
+SpaceBeforeParens: ControlStatements # Space before parentheses in control statements (like if, while)
+SpaceBeforeCtorInitializer: true # Space before the constructor initializer
+AllowShortFunctionsOnASingleLine: InlineOnly  # Allow short functions to be written inline
+PointerAlignment: Right   # Pointer alignment to the left (e.g., int* ptr)
+ReferenceAlignment: Left  # Reference alignment to align with pointer style
+
+# C specific
+Language: C
+
+# Enable/Disable specific formatting rules
+BraceWrapping:
+  AfterFunction: false      # Do not wrap braces after functions (e.g., `void foo() {`)
+  AfterControlStatement: false # Do not wrap braces after control statements
+  AfterStruct: false        # Do not wrap braces after struct definitions
+
+# Custom configurations to handle macro definitions and C-style formatting
+MacroBlockBegin: ""         # No special wrapping for the start of a macro block
+MacroBlockEnd: ""           # No special wrapping for the end of a macro block
+KeepEmptyLinesAtTheStartOfBlocks: false # Don't keep empty lines at the start of blocks
+CommentPragmas: '^.*$'       # Include all comments in the formatting
+
+# Specific formatting for structs and members
+SpaceBeforeConstructorInitializer: true # Space before constructor initializer
+IndentCaseLabels: true             # Indent case labels (for switch cases)
+MaxEmptyLinesToKeep: 1             # Limit consecutive empty lines to 1
+
+# Formatting for macros and function-like macros
+AlignMacros: true

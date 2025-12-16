@@ -1,0 +1,10 @@
+*.*
+*
+!*/
+!Makefile
+!*.mk
+!*.[ch]
+!.gitignore
+!.clang-format
+!README.md
+!test/*
